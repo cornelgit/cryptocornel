@@ -19,10 +19,6 @@
     "concurrently": "8.2.0"
   },
   "author": "Todd Hickam, Nathan Moes",
-  "workspaces": [
-    "express_server/",
-    "react_client"
-  ],
   "devDependencies": {
     "vercel": "32.5.3"
   },
