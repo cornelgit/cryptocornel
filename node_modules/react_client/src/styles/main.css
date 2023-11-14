@@ -1,0 +1,108 @@
+/* Main View Grid | sidebar & main-view-container */
+
+.dashboard-container {
+  grid-area: view;
+}
+
+.sidebar {
+  margin-left: 1em;
+  grid-area: sidebar;
+  margin-top: 1em;
+  border-radius: 0.5em;
+  border: 1px solid var(--blue-light);
+}
+
+.main-view-container {
+  display: grid;
+  grid-template-columns: 5fr 95fr;
+  grid-template-areas:
+    "sidebar view"
+    "sidebar view";
+}
+
+.sidebar .card-btn {
+  width: 7rem;
+  background-color: transparent;
+  color: var(--light);
+  border: none;
+  font-size: 20px;
+}
+
+.sidebar:hover .card-btn:hover {
+  background-color: var(--blue-light);
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;
+  border-radius: 20px;
+}
+
+/* Sidebar Grid Rows */
+
+.sidebar-header-space {
+  grid-area: header;
+}
+
+.sidebar-chart-view {
+  grid-area: charts;
+}
+
+.sidebar-asset-view {
+  grid-area: assets;
+}
+
+.sidebar {
+  display: grid;
+  grid-template-rows: 8em 32em;
+  grid-template-areas:
+    "header"
+    "charts"
+    "assets";
+}
+
+/* Inner Grid Area */
+
+/* .main-view, */
+.main-header,
+.main-footer {
+  background-color: var(--blue-bg);
+  border-radius: 0.5em;
+}
+
+.main-header {
+  grid-area: header;
+  background-size: cover;
+  padding-top: 1em;
+}
+
+.main-view {
+  margin: 0 auto;
+  grid-area: main;
+  min-height: 15em;
+}
+
+.main-footer {
+  grid-area: footer;
+  padding: 2em;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.dashboard-container {
+  margin: 0 1rem;
+  display: grid;
+  overflow-x: hidden;
+  gap: 1rem;
+  grid-template-rows: auto auto 45fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+@media only screen and (max-width: 1900px) {
+}
+
+@media only screen and (max-width: 1500px) {
+}
+
+@media only screen and (max-width: 1000px) {
+}
